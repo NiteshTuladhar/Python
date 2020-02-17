@@ -215,6 +215,8 @@ only uses two functions
 
 x.index
 x.count
+ksamlsa
+lsmands
 
 
 
