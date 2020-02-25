@@ -132,7 +132,7 @@ Nesting Indexing:
 Day 3
 
 To remove data from the list
-Pop() // removes based on position
+Pop() // removes based on position and if parameter not passed always from last data is removed.
 eg;
 	x=[1,2,3]
 	>>x.pop()
@@ -169,7 +169,7 @@ x= a. copy()// to overcome the problem where we need the previous list. her new 
 DICTIONARY:
  IS a data type to replace list.
 unordered collection of data which stores the data in key value pair so cannot be sort.
-does not support slicing
+does not support slicing as it is an unordered list.
 only supports indexing and should pass a key
 uses { } for dictioneary.
 ir is a mutable.
@@ -178,7 +178,7 @@ eg:
 	price={'shirt':1000}	// here shirt is a key and 1000 is a value.
 
 to add data in dictionary
-	price.update({'cap':4343})
+	price.update({'cap':4343}) // can be used for both single or multiple data 
 
 Note: to add only a single data as above 
 	price['cap']=3434 no need to use update
@@ -193,7 +193,7 @@ price.popitem() is a funtion that removes data based of LIFO meaning the data en
 SOme other funtions
 
 price.keys() // returns list of keys present
-price.value() // returns list of values
+price.values() // returns list of values
 price.items() // makes a pair of key and value and returns.
 price.copy() // same as list.
 
@@ -202,20 +202,62 @@ one of the most  unused data type.
 Immutable data type
 slicing and indexing is similar to list.
 is an ordered list.
+mostly used in networking where data needs to be tranfered without change.
 uses ()
 eg:
 	x=(1,2,3)
 
 >>x[0]
-1
+
 
 but we cannot do x[0]=0 /// because it is immutable.
-
+but if ther is list inside a tuple the list is mutable and can be changed inside a tuple
 only uses two functions
 
 x.index
 x.count
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Day 4
+
+Jupyter notebook 
+
+Branching statement
+to take input from the user
+		x=input("enter name") // kthis is only applicable for string value only
+
+But for inter float or any other
+		x=int(input("enter age")) // we must warp a statement to a data type 
+
+If else statement:
+	syntax
+
+	if condition:
+		statement 1  // her the statement is written after pressing one tab button on the keyboard and is inside the if condition
+	statement 2 // This is the statement outside the if condition because no tab is given.
+
+	else:
+		statement // same inside else.
+	statement // outside else
+
+if else if
+	if condition:
+		statement
+	elif
+		statement 
+	else
+		statement
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 4
+	Revision
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 5
+	Revision
+
+	zip & range
+		range(start_pos,end_pos,step_size) // does not include the last position so always increase by 1.
+		list.(zip(a,b)) // combines two list.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 

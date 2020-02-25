@@ -1,0 +1,23 @@
+
+Create a repo in github
+use gitbash
+
+ls
+cd "path of the file to be uploaded in the repo"
+git init
+git remote add origin "link from git repo"
+git remote -v
+git add .
+git commit -m "comment here!!"
+git push origin master
+
+note: if doing git push origin master an fast forward error occurs then do
+	git pull origin master
+	git push -f origin master
+
+
+
+git help
+git log
+git status
+
