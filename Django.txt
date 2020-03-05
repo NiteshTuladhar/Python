@@ -1,0 +1,76 @@
+	Django
+
+	Also know as MVC (Mmodel, view, Controller) but Django states it as MTV wher T is template that stores html css.
+	To solve a complex or unstructured program we use MVC.
+	Mosltly uysed architectire.
+	
+	Model : codes for database are kept in model.
+	View : Front end. what user sees
+	controller: to makecommunication between model and view because model and view cannot deirectly communicate with one another.
+
+	User accesses the browser
+	Browser sends http request.
+	Url (Router,Web) used for mapping and stores multiple url's 
+	Controller or View : Consists of multiple controller and inside one controller multiple functions.
+	
+	First user enters url and this url is sent to URL block that calls a funtion in controller block then one of the controller inside controller block sends 
+	a render request along with file name like index.html and data context(payload) to Template that has files such as index.html or contact.html. Then the file is viewed.
+	
+	Controller cannot access the db directly, has to go through model . Thenn the model accesses the database and sends the data to the controller funtion.
+
+	Jinja: Language used for Templating.
+
+	
+
+	MODEL:
+		ORM : Object Relation Mapping.
+			
+			- is a tool that is used for mapping DB.
+			- One of the mostly used technology.
+			- Used when we need to switch between two codes. Eg if We have to switch between MySQL to Oracle.
+			- In ORM we do not directly write the code in MySQl and use High level program where we make class and call object.
+			- Then map this class into Relation ---> Table.
+			- So then this Program in HLL is converted to SQL This process is called migration.
+			- Then The SQL is converted to DB . This process is konw as migrate.
+
+	ORM use in Django ---> Django ORM.
+
+	Virtual Environment:
+			- package Virtualenv
+			- Here we create a Virtual environment and packages are installed in this env and is activated.
+			- Then to remove or uninstall these package we deactivate the environment.
+			- This eliminates the problem of manually uninstalling each and every packages as packages can be a lot.
+			- Packages eg; pip install pillow or pip install jupyter-notebook
+
+
+		TO CREATE A PROJECT IN DJANGO
+				- We use following command
+					1. django-admin startproject blog.  blog is project name.
+					2. Navigate to a blog file i.e cd blog in cmd
+					3. Then command Python manage.py runserver that creates a local server.
+						 Then server is created.
+						ctrl+c to stop server
+						 here ftp://127..2.21:8000 is a default port address and sometimes 8000 port can be unavailable when using apps like skipe or other.
+						 Then go to browser and type local:8000
+	
+			Note : db.sqlite3 is a default lite weight Db that is only used for production we need to upgrade to stronger DB when developing a project.
+				In cmd 17 unapplied migration means that python has created class and object for these. For this we stop the server and then type "python manage.py migration" 
+				then we again run the server "python manage.py runserver"
+				
+					4. Now in browser type local:8000/admin and it asks for credentials
+					5. To create a user : "python manage.py createsuperuser"
+
+					6. create the new app
+						python manage.py startapp news. here news is app_name
+
+			Blog is a project and new is one of the app of a project.
+				- The blog does not recognize the app news initially so we must go to setting.py and in INSTALLED APPS we need to add news app by typing 'news',
+
+
+		Note: To recognize a app file we check for __init__py file inside the file.
+
+		To get a python cell in Pycharm
+				python manage.py shell
+		
+		
+			
