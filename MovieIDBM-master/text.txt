@@ -1,0 +1,7 @@
+object.movie_trailer
+https://www.youtube.com/embed/s2-1hz1juBI
+
+ def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+            super(Movie, self).save(*args, **kwargs)
